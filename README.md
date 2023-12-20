@@ -2,14 +2,14 @@
 
 **_Ques-1 :_** _What are some benefits of using TypeScript over JavaScript in a project?_
 
-**Ans :** _TypeScript offers several benefits over JavaScript, especially in large-scale applications or projects with teams of developers,it is more preferred to use.such as - Type-related errors are caught during development rather than at runtime.Also,TypeScript code tends to be more readable and maintainable due to explicit type footnote and interfaces.As a result, Developers can understand the codebase more easily, leading to improved collaboration and reduced learning curve for new team members._
+> **Ans :** _TypeScript offers several benefits over JavaScript, especially in large-scale applications or projects with teams of developers,it is more preferred to use.such as - Type-related errors are caught during development rather than at runtime.Also,TypeScript code tends to be more readable and maintainable due to explicit type footnote and interfaces.As a result, Developers can understand the codebase more easily, leading to improved collaboration and reduced learning curve for new team members._
 
 **_Ques-2 :_** _What is the purpose of the optional chaining (?.) and nullish coalescing (??) operators in TypeScript, and how do they work? Provide an example for each._
 
-##### Ans:
-
-- **Optional chaining (?.) :**
-  - The ?. operator is like the . chaining operator, except that instead of causing an error if a reference is nullish (null or undefined), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.
+> **Ans :**
+>
+> - **Optional chaining (?.) :**
+>   - _The ?. operator is like the . chaining operator, except that instead of causing an error if a reference is nullish (null or undefined), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist._
 
 > **For example** - _interface User {
 > profile?: {
@@ -21,8 +21,8 @@
 > const cityWithOptionalChaining = user.profile?.address?.city;
 > console.log(cityWithOptionalChaining): => undefined_
 
-- **Nullish coalescing (??) :**
-  - The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+> - **Nullish coalescing (??) :**
+> - _The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand._
 
 > **For example** -
 > _const foo = null ?? 'default string';
@@ -77,6 +77,5 @@
 > **Ans :** _A union type describes a value that can be one of several types. We use the vertical bar ( | ) to separate each type, so number | string | boolean is the type of a value that can be a number , a string , or a boolean ._
 
 > **For Example -:** > \*function displayType(value: number | string);
-> {if (typeof value === 'number') {console.log('It is a number!');}else{console.log('It is a string!');}}\*
-> _displayType(42); // Outputs: It is a number!
+> {if (typeof value === 'number') {console.log('It is a number!');}else{console.log('It is a string!');}}\* > _displayType(42); // Outputs: It is a number!
 > displayType("hello"); // Outputs: It is a string!_
