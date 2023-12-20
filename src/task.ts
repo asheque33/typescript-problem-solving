@@ -9,7 +9,6 @@
     }
   };
   named("Abdullah");
-  // console.log(named("Abdullah"));
 
   interface Person {
     address?: {
@@ -31,15 +30,14 @@
     return person.address?.city;
   }
   getAddressCity(Rifat);
-  // console.log(getAddressCity(Rifat));
 
   const mixedData: (number | string)[] = [
     "seeds",
-    84,
+    "30",
     "nuts",
-    23,
+    "3",
+    2,
     "salads",
-    67,
   ];
 
   function sumNums(mixedData: (number | string)[]): number {
@@ -47,12 +45,13 @@
     mixedData.forEach((data) => {
       if (typeof data === "number") {
         total = total + data;
+      } else if (!isNaN(Number(data))) {
+        total = total + Number(data);
       }
     });
     return total;
   }
   sumNums(mixedData);
-  // console.log(sumNums(mixedData));
 
   interface Car {
     make: string;
@@ -73,7 +72,6 @@
     return { car, driver };
   }
   combineBothCarDriver(carInfo, driverInfo);
-  // console.log(combineBothCarDriver(carInfo, driverInfo));
 
   interface Product {
     name: string;
@@ -92,6 +90,28 @@
     );
   }
   totalPrice(product1);
-  // console.log(totalPrice(product1));
+  const numArray: Array<number> = [23, 45, 12, 20];
+  const strArray: Array<string> = ["A", "B", "C", "D"];
+  function findFirstOccurrence<T>(array: T[], value: T): number {
+    const index = array.indexOf(value);
+    return index !== -1 ? index : -1;
+  }
+  const indexInNumber = findFirstOccurrence(numArray, 48);
+  const indexInString = findFirstOccurrence(strArray, "A");
+  const arr1 = [40, 5, 6, 7, 8];
+  const arr2 = [12, "a", "b", 6, "c", 9];
+  function calcSum(value: unknown): any {
+    if (
+      Array.isArray(value) &&
+      value.every((isNumber) => typeof isNumber === "number")
+    ) {
+      const sum = value.reduce((acc, isNumber) => acc + isNumber, 0);
+      console.log("Sum of Numbers are : ", sum);
+    } else {
+      console.log("Parameter is not an array of numbers");
+    }
+  }
+  calcSum(arr1);
+  calcSum(arr2);
   //
 }
