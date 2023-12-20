@@ -75,5 +75,23 @@
   combineBothCarDriver(carInfo, driverInfo);
   // console.log(combineBothCarDriver(carInfo, driverInfo));
 
+  interface Product {
+    name: string;
+    price: number;
+    quantity: number;
+  }
+  const product1: Product[] = [
+    { name: "seeds", price: 390, quantity: 2 },
+    { name: "nuts", price: 620, quantity: 3 },
+  ];
+
+  function totalPrice(product: Product[]): number {
+    return product.reduce(
+      (sum, product) => sum + product.price * product.quantity,
+      0
+    );
+  }
+  totalPrice(product1);
+  // console.log(totalPrice(product1));
   //
 }
