@@ -1,0 +1,20 @@
+{
+  "name": "assessment_01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "./dist/tasks.js",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/task.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}
